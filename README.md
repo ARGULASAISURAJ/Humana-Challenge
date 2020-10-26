@@ -182,7 +182,7 @@ The CMS features are divided into two categories CMS diagnosis and CMS risk scor
 -	Binary - Whether a member has availed a service in at least one category
 We replaced NULL values in some of the numeric features with mean and categorical columns with mode of the column of training data on both training and validation data.
  
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture11.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture12.png?raw=true "Optional Title") 
  
 ### 5. Model Building
 
@@ -207,41 +207,41 @@ We pipelined the features into machine learning and statistical models to check 
 
 Light GBM is almost 7 times faster than XGBOOST and is a much better approach when dealing with large datasets. Light GBM is a fast, distributed, high-performance gradient boosting framework based on a decision tree algorithm, used for ranking, classification and many other machine learning tasks. The parameters used for the final model are colsample_bytree=0.8(Subsample ratio of columns when constructing each tree). learning_rate=0.02(The amount that the weights are updated during training), max_depth=8(Maximum tree depth for base learners), n_estimators=74(Number of boosted trees to fit), reg_lambda=1.0(L2 regularization term on weights), subsample=0.7(subsample ratio of the training instance). The Logistic model summarizes the coefficients and standard errors of how a dependent feature varies when an independent feature is changed by a unit. The interpretation is in terms of log-odds and can be easily converted to probabilities.
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture12.png?raw=true "Optional Title") 
- 
  ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture13.png?raw=true "Optional Title") 
  
  ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture14.png?raw=true "Optional Title") 
+ 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture15.png?raw=true "Optional Title") 
  
 The Shapley plot gives clear output on the effect of each feature and the correlation. We can clearly see the cms_total_partd_payment_amt, cms_disabled_ind, ccsp_239_ind and betos_01a_ct_betos have high and positive impact on transportation issue (The high comes from the red color and positive impact shows from the X-axis). With increase in the value present in these columns the chances of a member facing the transportation issue goes up. On the other hand, est_age, ccsp_220_ind have negative correlation.
 
 ### 6. Insights and Recommendations
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture15.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture16.png?raw=true "Optional Title") 
  
 - cms_total_partd_payment is the payment made to private insurers for delivering prescription drug benefits to Medicare beneficiaries. This feature has a strong positive influence on transport problems. If the sum is higher than $200, the chances of having transportation difficulties would increase. This can be further supported by the statistical model, for every $100 increase in cms_total_partd_payment_amt, the log odds of transportation issue increase by 0.254. 
 
 ***Recommendation:*** Humana, with the aid of pharmacy partners, can assist patients spending more than $200, by delivering the prescription medications to their home / work along with FFS (fee for service) options by partnering with Uber/Lyft. This will alleviate the transportation efforts made by patients and improve the level of service offered to individual customers.
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture16.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture17.png?raw=true "Optional Title") 
 
 - From the plot above, we can observe that the probability of predicting transportation_issues dependent feature increases with decrease in age and its more evident when age is less than 60. The statistical model output also aligns with this pattern i.e. log-odds reduces by 0.03 when age increases by a year. The Medicare services are provided to members whose age is greater than 65, certain young people with disabilities and people with end-stage renal disease. 
 
 ***Recommendation:*** Younger members with disabilities and members with serious health conditions are at larger risk than few senior members among Medicare Beneficiaries. Providing disability services like in-home treatment will be beneficial.	
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture17.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture18.png?raw=true "Optional Title") 
 
 - Betos_01a_pmpm_ct_betos is the ambulance service code in the barenson-eggers type of service codes. The plot on the right clearly shows that the members who have pmpm count greater than 1, have higher chance of facing transportation issues and the log-odds increases by 0.189 with increase in betos_01a_pmpm_ct_betos by 1. The possible reason behind this can be that there is no reliable mode of transportation in their locality or the severity of their issue is high which needs frequent ambulance service.
 
 ***Recommendation:*** Contact members to know the issue for which the ambulance service is used and embrace telehealth services, where the severity of the problem is low.  
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture18.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture19.png?raw=true "Optional Title") 
  
 -	Functional Comorbidity Issues (FCI), is calculated on 18 aspects which reveal the overall health status of a person. From the plot, it is evident that members having score greater than 5 have higher chance of facing transportation issues and with every increase in score, the log odds of having transportation issues increases by 0.013.
 
 ***Recommendation:*** The clear distinction of threshold helps to identify members and  introduce Health Plans/ fitness plans. These Health literacy initiatives can be achieved by partnering with fitness services.
 
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture19.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture20.png?raw=true "Optional Title") 
 
 - There is an interesting pattern with interaction of cms_risk_adj_payment_rate_b_amt and cms_diasbled_ind. If a member is disabled then the increase in predictability of transportation is almost zero irrespective of the increase in payment_rate_b (as most of the red points are on the zero line), but if the member is not disabled and the cms_risk_adj_payment_rate_b_amt is greater than 500 then the predictability increases.
 
