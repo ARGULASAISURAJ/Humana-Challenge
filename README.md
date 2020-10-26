@@ -100,13 +100,13 @@ Descriptive statistics:
 -	13% of members used ambulance service and 30% of them faced transportation issues
 -	Total amount of pmpm spent on physician services across all the members is 43983
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture5.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture4.png?raw=true "Optional Title") 
 
 #### 4.2 Pharmacy Claims
 
 These features provide details about 100 different drugs used by the members. It also provides information on prescription and delivery of drugs - whether the prescription was branded or generic or whether the drugs were mailed. After discussing with a pharma expert, we categorized all the drugs based on their health/illness purpose into 18 categories.
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture6.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture5.png?raw=true "Optional Title") 
 
 New features:
 - ind_sum: Aggregated all the indicators in each group
@@ -122,7 +122,7 @@ Descriptive statistics:
 -	Average pmpm count is higher for cardiovascular and antibiotics drugs than others.
 -	The plots below display pmpm cost per member across top categories
  
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture6.png?raw=true "Optional Title") 
  
 #### 4.3 Demographics or Consumer Data
 
@@ -134,7 +134,11 @@ New features:
 Descriptive statistics:
 -	Mean age of members facing transportation issues (66 years) is distinctively different from members who don't (71 years). Ideally, we would expect older people to face transportation issues.
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture8.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
+
+- Percentage of members (in different categories) facing transportation issues:
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
 
 #### 4.4 Condition Related Features
 
