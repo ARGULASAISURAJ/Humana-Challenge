@@ -100,13 +100,13 @@ Descriptive statistics:
 -	13% of members used ambulance service and 30% of them faced transportation issues
 -	Total amount of pmpm spent on physician services across all the members is 43983
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture4.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture5.png?raw=true "Optional Title") 
 
 #### 4.2 Pharmacy Claims
 
 These features provide details about 100 different drugs used by the members. It also provides information on prescription and delivery of drugs - whether the prescription was branded or generic or whether the drugs were mailed. After discussing with a pharma expert, we categorized all the drugs based on their health/illness purpose into 18 categories.
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture5.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture6.png?raw=true "Optional Title") 
 
 New features:
 - ind_sum: Aggregated all the indicators in each group
@@ -122,7 +122,7 @@ Descriptive statistics:
 -	Average pmpm count is higher for cardiovascular and antibiotics drugs than others.
 -	The plots below display pmpm cost per member across top categories
  
- ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture6.png?raw=true "Optional Title") 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
  
 #### 4.3 Demographics or Consumer Data
 
@@ -134,7 +134,7 @@ New features:
 Descriptive statistics:
 -	Mean age of members facing transportation issues (66 years) is distinctively different from members who don't (71 years). Ideally, we would expect older people to face transportation issues.
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture8.png?raw=true "Optional Title") 
 
 #### 4.4 Condition Related Features
 
@@ -142,7 +142,7 @@ Descriptive statistics:
 
 Mental health is essential to a person’s well-being. These indicators shed light on health conditions like bipolar disorder, alcohol abuse, substance abuse, tobacco use disorder, major depressive disorder, post-traumatic stress disorder and other anxiety disorders which can be directly linked to the possibility of having transportation issues. The graph below displays the total number of members present in each behavioral category:
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture8.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture9.png?raw=true "Optional Title") 
 
 New features:
 -	Binary indicator - whether the member faced any behavioral issue
@@ -156,7 +156,7 @@ Descriptive Statistics:
 
 The CCI scores are used to categorize the severity of comorbidity into three grades: mild (CCI scores of 1–2) moderate (CCI scores of 3–4) and severe (CCI scores ≥5). The FCI scores range from 0 to 18 and DCSI scores range from 0 to 13.
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture9.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture10.png?raw=true "Optional Title") 
     
 ##### 4.4.3 MCC Diagnosis Code Categories
 Major clinical categories are created to bin the type of diagnosis a member received. According to the description file presented by Humana there are 28 different categories and there are ample members who received more than one type of clinical diagnosis. These provide insights to the type of diagnosis which in turn helps to find the members who are most probable of facing transportation issues. For example, if a member is diagnosed with spine issues, he/she might be facing the transportation issue. 
@@ -171,7 +171,7 @@ Descriptive statistics:
 -	Highest diagnosis count is 82 for member fM3O00b0S6a12dTLYA032bIe
 -	The tree map below displays pmpm count greater than 40k across multiple MCC categories
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture10.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture11.png?raw=true "Optional Title") 
  
 #### 4.5 CMS Features 
 The Centers for Medicare & Medicaid Services is a federal agency that oversees major healthcare programs. The organization seeks to provide better treatment, access to coverage, and enhanced health CMS features for the healthcare system. It provides interesting details on risk factors and indicators of members' eligibility for various programs. 
