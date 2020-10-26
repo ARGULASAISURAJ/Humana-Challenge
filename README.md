@@ -138,7 +138,7 @@ Descriptive statistics:
 
 - Percentage of members (in different categories) facing transportation issues:
 
-![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture8.png?raw=true "Optional Title") 
 
 #### 4.4 Condition Related Features
 
