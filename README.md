@@ -212,3 +212,6 @@ The Shapley plot gives clear output on the effect of each feature and the correl
 -	Predicting members who might use ambulatory services, would help in pre-admission and mitigate possible risk of transportation.
 -	The need for virtual connection is more needed than ever due to Covid. Creating a platform for members to meet the Primary care Physician (PCP) virtually might help reduce the emergency ambulance rides.
 
+### 7.	Conclusion
+
+SDOH is now being incorporated in Insurance and public health domain. With guidelines from CMS, various programs can be initiated based on the insights generated from the above analysis. By mitigating the transportation issue faced by its members, Humana will be able to solve one of the Social Determinants of health which in turn would not only improve health status and affordability of its members, but also cut-costs, reduce spending and support communities. By Identifying a small number of the high-risk members responsible for majority of healthcare costs, reaching, and engaging with those members is critical for improved outcomes. Since, transportation is a broader/holistic issue dependent on many economic factors. The increase in personal data combined with machine learning has potential to identify the vulnerable members.
