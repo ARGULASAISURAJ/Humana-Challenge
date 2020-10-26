@@ -40,6 +40,8 @@ Our goal was to predict if the members are likely to struggle with transportatio
 
 From the distribution of this feature, we can observe that 85% of the members do not face transportation issues which creates a class imbalance problem and should be taken care of while building the predictive model.  The document also talks about the descriptive analysis of the dataset.
 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture1.png?raw=true "Optional Title") 
+
 ### 4. Feature Engineering and Exploratory Data Analysis
 
 The data mainly included medical claims, pharmacy claims, lab claims, demographics, consumers, credit, clinical conditions, CMS member data, and other member-related features. This section discusses the inferences, features generated and interesting observations or patterns that are derived in the above-mentioned categories. Since, the data is augmented, the derived conclusions are limited and may not represent the real-world scenario. 
@@ -66,6 +68,8 @@ Descriptive statistics:
 - 15% of the members had superficial injury and contusion (ccsp_239_ind), and 30% of them faced transportation issues.
 - 72% of the members availed at least one of the CCSP services (out of 21) and 15% of them had transportation issues.
 - The plot below shows the frequency of top services used in CCSP category
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture2.png?raw=true "Optional Title") 
  	
 ##### 4.1.2	BETOS (Berenson-Eggers Type of Service) Procedure codes 
 
@@ -82,6 +86,8 @@ Descriptive statistics:
 -	Member id d97e73MOSe86T74L0Y5A8Ifb who does not face transportation issues has used 16 services in 5 categories that summed to 15.27 PMPM.
 -	Evaluation category has maximum PMPM sum of 58935
  
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture3.png?raw=true "Optional Title") 
+ 
 ##### 4.1.3	Utilization by category
 
 These features give information about visits (ambulance, urgent care, emergency rooms, physician office, outpatient), hospital admit count and days for chronic, acute and maternity health conditions. The features are spread across two categories - medical and total. We have only focused on the total category as it covers both medical and non-medical categories.
@@ -94,9 +100,13 @@ Descriptive statistics:
 -	13% of members used ambulance service and 30% of them faced transportation issues
 -	Total amount of pmpm spent on physician services across all the members is 43983
 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture4.png?raw=true "Optional Title") 
+
 #### 4.2 Pharmacy Claims
 
 These features provide details about 100 different drugs used by the members. It also provides information on prescription and delivery of drugs - whether the prescription was branded or generic or whether the drugs were mailed. After discussing with a pharma expert, we categorized all the drugs based on their health/illness purpose into 18 categories.
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture5.png?raw=true "Optional Title") 
 
 New features:
 - ind_sum: Aggregated all the indicators in each group
@@ -112,6 +122,8 @@ Descriptive statistics:
 -	Average pmpm count is higher for cardiovascular and antibiotics drugs than others.
 -	The plots below display pmpm cost per member across top categories
  
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture6.png?raw=true "Optional Title") 
+ 
 #### 4.3 Demographics or Consumer Data
 
 A lot can be derived from the personal information of a member and socio-demographic information that can have a practical effect on the likelihood of facing transport problems. Due to the presence of high NULL values and the inability of imputation models on member level data, we discarded many features that we believe would be useful and selected age, sex, current smoker, former smoker, rural and urban category features from the data.
@@ -122,12 +134,16 @@ New features:
 Descriptive statistics:
 -	Mean age of members facing transportation issues (66 years) is distinctively different from members who don't (71 years). Ideally, we would expect older people to face transportation issues.
 
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture7.png?raw=true "Optional Title") 
+
 #### 4.4 Condition Related Features
 
 ##### 4.4.1 Behavioral Health Condition Indicators
 
 Mental health is essential to a person’s well-being. These indicators shed light on health conditions like bipolar disorder, alcohol abuse, substance abuse, tobacco use disorder, major depressive disorder, post-traumatic stress disorder and other anxiety disorders which can be directly linked to the possibility of having transportation issues. The graph below displays the total number of members present in each behavioral category:
- 
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture8.png?raw=true "Optional Title") 
+
 New features:
 -	Binary indicator - whether the member faced any behavioral issue
 -	Aggregation - total number of behavioral issues faced by the member
@@ -139,6 +155,8 @@ Descriptive Statistics:
 ##### 4.4.2 CCI (Charlson Comorbidity Index), FCI (Functional Comorbidity Index) and DCSI (Diabetes Complication Severity Index)
 
 The CCI scores are used to categorize the severity of comorbidity into three grades: mild (CCI scores of 1–2) moderate (CCI scores of 3–4) and severe (CCI scores ≥5). The FCI scores range from 0 to 18 and DCSI scores range from 0 to 13.
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture9.png?raw=true "Optional Title") 
     
 ##### 4.4.3 MCC Diagnosis Code Categories
 Major clinical categories are created to bin the type of diagnosis a member received. According to the description file presented by Humana there are 28 different categories and there are ample members who received more than one type of clinical diagnosis. These provide insights to the type of diagnosis which in turn helps to find the members who are most probable of facing transportation issues. For example, if a member is diagnosed with spine issues, he/she might be facing the transportation issue. 
@@ -152,6 +170,8 @@ Descriptive statistics:
 -	Highest pmpm for a member is 73.03 (Member ID 18M71O8S48eT87dLY81A12I0)
 -	Highest diagnosis count is 82 for member fM3O00b0S6a12dTLYA032bIe
 -	The tree map below displays pmpm count greater than 40k across multiple MCC categories
+
+![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture10.png?raw=true "Optional Title") 
  
 #### 4.5 CMS Features 
 The Centers for Medicare & Medicaid Services is a federal agency that oversees major healthcare programs. The organization seeks to provide better treatment, access to coverage, and enhanced health CMS features for the healthcare system. It provides interesting details on risk factors and indicators of members' eligibility for various programs. 
@@ -161,6 +181,8 @@ The CMS features are divided into two categories CMS diagnosis and CMS risk scor
 -	Aggregation - total number of services availed by a member in each category
 -	Binary - Whether a member has availed a service in at least one category
 We replaced NULL values in some of the numeric features with mean and categorical columns with mode of the column of training data on both training and validation data.
+ 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture11.png?raw=true "Optional Title") 
  
 ### 5. Model Building
 
@@ -184,26 +206,42 @@ Instead of simply splitting the dataset into train and test, we used stratified 
 We pipelined the features into machine learning and statistical models to check the performance and choose the best model for prediction. We had a tradeoff between choosing different models, either to choose Whitebox models for clear understanding of impact of each feature on target feature or to choose Blackbox models which have high predictability and less understandability of features impact- to this end we did both. We have implemented LightGBM as the machine learning model and used the generalized linear model with binary distribution (logistic regression) to validate ML interpretations. We believe this has struck a balance of complexity and interpretability. 
 
 Light GBM is almost 7 times faster than XGBOOST and is a much better approach when dealing with large datasets. Light GBM is a fast, distributed, high-performance gradient boosting framework based on a decision tree algorithm, used for ranking, classification and many other machine learning tasks. The parameters used for the final model are colsample_bytree=0.8(Subsample ratio of columns when constructing each tree). learning_rate=0.02(The amount that the weights are updated during training), max_depth=8(Maximum tree depth for base learners), n_estimators=74(Number of boosted trees to fit), reg_lambda=1.0(L2 regularization term on weights), subsample=0.7(subsample ratio of the training instance). The Logistic model summarizes the coefficients and standard errors of how a dependent feature varies when an independent feature is changed by a unit. The interpretation is in terms of log-odds and can be easily converted to probabilities.
+
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture12.png?raw=true "Optional Title") 
+ 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture13.png?raw=true "Optional Title") 
+ 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture14.png?raw=true "Optional Title") 
  
 The Shapley plot gives clear output on the effect of each feature and the correlation. We can clearly see the cms_total_partd_payment_amt, cms_disabled_ind, ccsp_239_ind and betos_01a_ct_betos have high and positive impact on transportation issue (The high comes from the red color and positive impact shows from the X-axis). With increase in the value present in these columns the chances of a member facing the transportation issue goes up. On the other hand, est_age, ccsp_220_ind have negative correlation.
 
 ### 6. Insights and Recommendations
 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture15.png?raw=true "Optional Title") 
+ 
 - cms_total_partd_payment is the payment made to private insurers for delivering prescription drug benefits to Medicare beneficiaries. This feature has a strong positive influence on transport problems. If the sum is higher than $200, the chances of having transportation difficulties would increase. This can be further supported by the statistical model, for every $100 increase in cms_total_partd_payment_amt, the log odds of transportation issue increase by 0.254. 
 
 ***Recommendation:*** Humana, with the aid of pharmacy partners, can assist patients spending more than $200, by delivering the prescription medications to their home / work along with FFS (fee for service) options by partnering with Uber/Lyft. This will alleviate the transportation efforts made by patients and improve the level of service offered to individual customers.
 
-- From the plot on the right, we can observe that the probability of predicting transportation_issues dependent feature increases with decrease in age and its more evident when age is less than 60. The statistical model output also aligns with this pattern i.e. log-odds reduces by 0.03 when age increases by a year. The Medicare services are provided to members whose age is greater than 65, certain young people with disabilities and people with end-stage renal disease. 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture16.png?raw=true "Optional Title") 
+
+- From the plot above, we can observe that the probability of predicting transportation_issues dependent feature increases with decrease in age and its more evident when age is less than 60. The statistical model output also aligns with this pattern i.e. log-odds reduces by 0.03 when age increases by a year. The Medicare services are provided to members whose age is greater than 65, certain young people with disabilities and people with end-stage renal disease. 
 
 ***Recommendation:*** Younger members with disabilities and members with serious health conditions are at larger risk than few senior members among Medicare Beneficiaries. Providing disability services like in-home treatment will be beneficial.	
+
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture17.png?raw=true "Optional Title") 
 
 - Betos_01a_pmpm_ct_betos is the ambulance service code in the barenson-eggers type of service codes. The plot on the right clearly shows that the members who have pmpm count greater than 1, have higher chance of facing transportation issues and the log-odds increases by 0.189 with increase in betos_01a_pmpm_ct_betos by 1. The possible reason behind this can be that there is no reliable mode of transportation in their locality or the severity of their issue is high which needs frequent ambulance service.
 
 ***Recommendation:*** Contact members to know the issue for which the ambulance service is used and embrace telehealth services, where the severity of the problem is low.  
 
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture18.png?raw=true "Optional Title") 
+ 
 -	Functional Comorbidity Issues (FCI), is calculated on 18 aspects which reveal the overall health status of a person. From the plot, it is evident that members having score greater than 5 have higher chance of facing transportation issues and with every increase in score, the log odds of having transportation issues increases by 0.013.
 
 ***Recommendation:*** The clear distinction of threshold helps to identify members and  introduce Health Plans/ fitness plans. These Health literacy initiatives can be achieved by partnering with fitness services.
+
+ ![](https://github.com/netisheth/Humana-Challenge/blob/master/Pictures/Picture19.png?raw=true "Optional Title") 
 
 - There is an interesting pattern with interaction of cms_risk_adj_payment_rate_b_amt and cms_diasbled_ind. If a member is disabled then the increase in predictability of transportation is almost zero irrespective of the increase in payment_rate_b (as most of the red points are on the zero line), but if the member is not disabled and the cms_risk_adj_payment_rate_b_amt is greater than 500 then the predictability increases.
 
